@@ -9,3 +9,8 @@ stop:
 	@kill `cat p1.pid` || true
 	@kill `cat p2.pid` || true
 	@rm -f p1.pid p2.pid
+
+build:
+	@echo "Building..."
+	@templ generate
+	@go build -o main.exe main.go
